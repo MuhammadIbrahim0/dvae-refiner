@@ -19,7 +19,7 @@ def load_DRIVE(patch_size):
 
     # loading training data
 
-    img_dir = r'../data/DRIVE/training/images/'
+    img_dir = r'/../data/DRIVE/training/images/'
     gt_dir  = r'../data/DRIVE/training/1st_manual/'
     fov_dir = r'../data/DRIVE/training/mask/'        
 
