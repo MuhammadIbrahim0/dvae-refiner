@@ -235,7 +235,7 @@ with torch.no_grad():
         train_wrong += b
         train_correct += c   
 
-        train_segs[i] = seg
+        train_segs[i] = seg.cpu().numpy()
 
     for i in range(test_X.shape[0]):
 
@@ -255,7 +255,7 @@ with torch.no_grad():
         test_wrong += b
         test_correct += c   
 
-        test_segs[i] = seg
+        test_segs[i] = seg.cpu().numpy()
 
     train_auc, train_acc, train_sen, train_spe = get_my_metrics(train_segs,train_Y,train_F)
     test_auc, test_acc, test_sen, test_spe = get_my_metrics(test_segs,test_Y,test_F)
