@@ -19,9 +19,9 @@ def load_DRIVE(patch_size):
 
     # loading training data
 
-    img_dir = r'/content/dvae-refiner//data/DRIVE/training/images/'
-    gt_dir  = r'../data/DRIVE/training/1st_manual/'
-    fov_dir = r'../data/DRIVE/training/mask/'        
+    img_dir = r'/content/dvae-refiner/data/DRIVE/training/images/'
+    gt_dir  = r'/content/dvae-refiner/data/DRIVE/training/1st_manual/'
+    fov_dir = r'/content/dvae-refiner/data/DRIVE/training/mask/'        
 
     img_path = os.listdir(img_dir)
     img_path.sort()
@@ -66,9 +66,9 @@ def load_DRIVE(patch_size):
 
     # loading test data
 
-    img_dir = r'../data/DRIVE/test/images/'
-    gt_dir  = r'../data/DRIVE/test/1st_manual/'
-    fov_dir = r'../data/DRIVE/test/mask/'
+    img_dir = r'/content/dvae-refiner/data/DRIVE/test/images/'
+    gt_dir  = r'/content/dvae-refiner/data/DRIVE/test/1st_manual/'
+    fov_dir = r'/content/dvae-refiner/data/DRIVE/test/mask/'
 
     img_path = os.listdir(img_dir)
     img_path.sort()
