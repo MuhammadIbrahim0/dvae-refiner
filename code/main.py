@@ -50,7 +50,7 @@ train_X, train_Y, train_F, train_S, test_X, test_Y, test_F = load_DRIVE(PATCH_SI
 
 # loading weights
 if USE_PRETRAINED:
-    path = '../weights/' + MODEL.lower() + '_' + LOSS_TYPE.lower() + '_weights.pth'
+    path = '/content/dvae-refiner/weights/' + MODEL.lower() + '_' + LOSS_TYPE.lower() + '_weights.pth'
     model.load_state_dict(torch.load(path))
 
 # training procedure
