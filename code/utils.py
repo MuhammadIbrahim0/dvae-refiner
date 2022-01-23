@@ -59,9 +59,9 @@ def load_DRIVE(patch_size):
         fov_list = [(R_idx_fov[k], C_idx_fov[k]) for k in range(R_idx_fov.size)]            
         my_list = [(x,y) for (x,y) in fov_list if (x,y) in elig_set]
 
-        train_imgs[i,:960,:999]  = RGB[:,:,1] # using just the green channel
-        train_gts[i,:960,:999] = gt
-        train_fovs[i,:960,:999]  = fov
+        train_imgs[i,:584,:565]  = RGB[:,:,1] # using just the green channel
+        train_gts[i,:584,:565] = gt
+        train_fovs[i,:584,:565]  = fov
         train_selects.append(my_list)
 
     # loading test data
@@ -104,9 +104,9 @@ def load_DRIVE(patch_size):
         fov_list = [(R_idx_fov[k], C_idx_fov[k]) for k in range(R_idx_fov.size)]
         my_list = [(x,y) for (x,y) in fov_list if (x,y) in elig_set]
 
-        test_imgs[i,:960,:999]  = RGB[:,:,1] # use only the green channel
-        test_gts[i,:960,:999] = gt
-        test_fovs[i,:960,:999]  = fov
+        test_imgs[i,:584,:565]  = RGB[:,:,1] # use only the green channel
+        test_gts[i,:584,:565] = gt
+        test_fovs[i,:584,:565]  = fov
 
     return train_imgs, train_gts, train_fovs, train_selects, test_imgs, test_gts, test_fovs
 
